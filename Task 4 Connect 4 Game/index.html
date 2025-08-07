@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="box">
+        <h1>Connect 4</h1>
+
+        <div class="mode-buttons">
+            <button id="singleBtn">Single Player</button>
+            <button id="multiBtn">Multiplayer</button>
+        </div>
+
+        <p id="status">Player Red's turn</p>
+        <div id="board"></div>
+
+        <div class="buttons">
+            <button id="resetBtn">Reset Game</button>
+            <button id="undoBtn">Undo</button>
+        </div>
+    </div>
+
+
+
+    <audio id="dropSoundRed" src="sounds/drop-red.mp3"></audio>
+    <audio id="dropSoundYellow" src="sounds/drop-yellow.mp3"></audio>
+    <audio id="winSound" src="sounds/win.mp3"></audio>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

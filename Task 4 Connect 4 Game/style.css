@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0px;
+    background-color: palegreen;
+}
+
+.box {
+    padding: 40px;
+    margin: 50px;
+    background-color: springgreen;
+    border-radius: 39px;
+}
+
+h1 {
+    color: #333;
+    font-weight: 800;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 420px;
+    margin: 20px auto;
+}
+
+.cell {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: #2196f3;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cell.empty:hover {
+    background-color: #64b5f6;
+}
+
+.token {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    animation: drop 0.4s forwards ease-out;
+}
+
+@keyframes drop {
+    to {
+        top: 10%;
+    }
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: goldenrod;
+    font-weight: bold;
+}
+
+.buttons button:hover {
+    background-color: rgb(240, 194, 80);
+}
+
+.mode-buttons {
+    margin-bottom: 15px;
+}
+
+.mode-buttons button {
+    background-color: goldenrod;
+    color: black;
+    margin: 5px;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mode-buttons button:hover {
+    background-color: rgb(240, 194, 80);
+}
+
+.mode-buttons button.active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 500px) {
+    #board {
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .token {
+        width: 90%;
+        height: 90%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
